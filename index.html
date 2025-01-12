@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Michael C. Herrera</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Courier, monospace;
+            padding: 0;
+            color: #382711;
+        }
+
+        nav {
+            display: block;
+            width: 100%;
+            height: 50px;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        nav a {
+            font-weight: bold;
+            padding-right: 10px;
+            text-decoration: none;
+            color: #ce4233;
+        }
+
+        .border-right {border-right: 1px solid #ce4233}
+
+        #banner-box {
+            position: relative;
+            height: 70vh;
+            min-height: 350px;
+            background-image: radial-gradient(farthest-corner at 90% 75%, #5d5d5f, #58585c, #424346, #333438);
+        }
+
+        #title {
+            position: absolute;
+            top: 15%;
+            right: 0;
+            left: 0;
+            width: fit-content;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #title h1 {
+            font-family: "Audiowide", serif;
+            font-size: 3em;
+            font-style: normal;
+            position: relative;
+            color: #ce4233;
+            text-shadow: 1px 1px 1px #382711;
+        }
+
+        #title #tagline {
+            font-size: 1.5em;
+            color: #ce4233;
+            text-shadow: 1px 1px 1px #382711;
+        }
+
+        #banner-pic {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 60%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+
+        #about-me {padding: 50px 100px;}
+
+        #about-me h2 {color: #ce4233;}
+
+        #about-me p {
+            font-size: 0.85em;
+            line-height: 2em;
+            margin-bottom: 15px;
+        }
+
+        #projects {
+            padding: 50px 100px;
+            background-color: #343944;
+        }
+
+        #projects a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #projects h2 {color: white;}
+
+        #projects fieldset {padding: 15px;}
+
+        #projects fieldset legend {font-weight: bold;}
+
+        #projects fieldset p {
+            font-size: 0.9em;
+            line-height: 1.5em;
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        #projects .project-screenshots {
+            display: grid;
+            grid-template-columns: auto;
+        }
+
+        #projects .project-screenshots .grid-item {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        #contact {
+            padding: 50px 100px;
+            background-color: #ce4233;
+        }
+
+        #contact h3 {
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+
+        #contact p {line-height: 1.5em;}
+
+        #contact a {color: #382711;}
+
+        #socials a {
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        @media only screen and (min-width: 950px) {
+
+            nav {
+                position: fixed;
+                z-index: 100;
+                left: 0.5%;
+                width: 99%;
+                text-align: right;
+            }
+
+            #title {
+                position: absolute;
+                top: 40%;
+                left: 15%;
+                margin: 0;
+                text-align: left;
+            }
+
+            #banner-pic {
+                position: absolute;
+                right: 15%;
+                bottom: 0;
+                left: auto;
+                height: 80%;
+                margin: 0;
+            }
+
+            #projects .project-screenshots {
+                display: grid;
+                padding: 10px;
+                color: white;
+                grid-template-columns: auto auto auto;
+                justify-items: center;
+            }
+
+            #projects .project-screenshots .grid-item {
+                width: 90%;
+                margin-bottom: 15px;
+            }
+
+            .inline {display: inline-block;}
+
+            .half-view {width: 50%;}
+        }
+    </style>
+    <script type="text/javascript">
+        function navColorChange() {
+            let page = document.documentElement;
+            let navigation = document.getElementById("navigation");
+
+            if (page.scrollTop < 20) {
+                navigation.style.top = "0";
+                navigation.style.backgroundColor = "rgba(51, 52, 56, 0)";
+                navigation.style.border = "none";
+                navigation.style.boxShadow = "none";
+            } else {
+                navigation.style.top = "5px";
+                navigation.style.backgroundColor = "white";
+                navigation.style.border = "1px solid #382711";
+                navigation.style.borderRadius = "5px";
+                navigation.style.boxShadow = "1px 1px 6px rgba(56, 39, 17, 0.75)";
+            }
+        }
+    </script>
+</head>
+<body onscroll="navColorChange()">
+<header id="banner-box">
+    <nav id="navigation">
+        <a class="border-right" href="#banner-box">Home</a>
+        <a class="border-right" href="#about-me">About Me</a>
+        <a class="border-right" href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div id="title">
+        <h1>Michael C. Herrera</h1>
+        <p id="tagline">Software Developer</p>
+    </div>
+    <img alt="bitmoji selfie" id="banner-pic" src="img/bitmoji2.png"/>
+</header>
+<div id="about-me">
+    <h2>ABOUT</h2>
+    <p>Hi! My name is Michael Herrera (preferred name Chris). I'm in my final semester at South Louisiana Community
+        College, where I maintain an institutional 4.0 grade point average in the Application Software Development
+        program. I was also hired as the lab assistant and tutor for the 2024 - 2025 school year.</p>
+    <p>Through the course of my studies, I have built a proficiency in the Java programming language, with particular
+        emphasis in web application development utilizing the Java Server Faces framework and the PrimeFaces component
+        library. Upon graduation, I will also have experience in C#, C++, CSS, HTML, JavaScript, and SQL languages. In
+        addition to the programming languages, I have developed competence in the fundamentals of database systems,
+        including database modeling and design. With the inclusion of coursework in data structures and algorithms, I am
+        confident my experience has prepared me for a successful start to a career in software development.</p>
+    <p>Beyond my studies in software development, I have also elected to study mathematics above what is required for my
+        degree. Besides college algebra, I have also completed courses in trigonometry, statistics, and calculus. These
+        courses further strengthen my programming skills, deductive reasoning abilities, and understanding of data and
+        probability.</p>
+    <p>Now, as I approach the culmination of my academic endeavors, I am enormously excited at the prospect of seeking a
+        position in the fascinating field of software development. I look forward to speaking with you about an
+        opportunity to join your team.</p>
+</div>
+<div id="projects">
+    <h2>PROJECTS</h2>
+    <a href="https://github.com/michaelcherrera84/Portal" title="github.com/michaelcherrera84/Portal">
+        <fieldset>
+            <legend>Portal</legend>
+            <p>This is a simple JSF (JavaServer Faces) project integrated with PrimeFaces, created as a demonstration
+                for my portfolio. The project showcases a web application built using Jakarta EE technologies and
+                PrimeFaces UI components. It's designed for educational purposes and to demonstrate basic CRUD and UI/UX
+                using JSF and PrimeFaces.</p>
+            <div class="project-screenshots">
+                <img class="grid-item" src="img/portal/home_page_1.png" alt="home page 1">
+                <img class="grid-item" src="img/portal/home_page_2.png" alt="home page 2">
+                <img class="grid-item" src="img/portal/login.png" alt="login">
+                <img class="grid-item" src="img/portal/employee_portal.png" alt="employee portal">
+                <img class="grid-item" src="img/portal/record_edit.png" alt="edit record">
+                <img class="grid-item" src="img/portal/record_add.png" alt="add record">
+                <img class="grid-item" src="img/portal/record_delete.png" alt="delete record">
+                <img class="grid-item" src="img/portal/record_search.png" alt="search record">
+            </div>
+        </fieldset>
+    </a>
+</div>
+<div id="contact">
+    <h2>CONTACT</h2>
+    <div class="inline half-view" id="socials">
+        <a href="https://www.linkedin.com/in/michaelcherrera">
+            <img alt="linkedin" src="img/linkedin.png" title="www.linkedin.com/in/michaelcherrera" width="50px">
+        </a>
+        <a href="https://github.com/michaelcherrera84">
+            <img alt="github" src="img/github.png" title="github.com/michalecherrera84" width="50px">
+        </a>
+        <a href="mailto:michael.c.herrera@icloud.com">
+            <img alt="email" src="img/email.png" title="michael.c.herrera@icloud.com" width="50px">
+        </a>
+    </div>
+    <div class="inline">
+        <h3>Michael C. Herrera</h3>
+        <p>Lafayette, Louisiana</p>
+    </div>
+</div>
+</body>
+</html>
