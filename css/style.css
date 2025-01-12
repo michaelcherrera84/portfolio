@@ -11,10 +11,10 @@ body {
 }
 
 nav {
+    padding: 15px 0;
     display: block;
     width: 100%;
     height: 50px;
-    padding: 15px 20px;
     text-align: center;
 }
 
@@ -46,7 +46,7 @@ nav a {
 
 #title h1 {
     font-family: "Audiowide", serif;
-    font-size: 3em;
+    font-size: 2em;
     font-style: normal;
     position: relative;
     color: #ce4233;
@@ -73,7 +73,7 @@ h2 {
     margin-bottom: 30px;
 }
 
-#about-me {padding: 50px 100px;}
+#about-me {padding: 30px 10px;}
 
 #about-me h2 {color: #ce4233;}
 
@@ -84,7 +84,7 @@ h2 {
 }
 
 #projects {
-    padding: 50px 100px;
+    padding: 30px 10px;
     background-color: #343944;
 }
 
@@ -117,7 +117,7 @@ h2 {
 }
 
 #contact {
-    padding: 50px 100px;
+    padding: 30px 10px;
     background-color: #ce4233;
 }
 
@@ -138,6 +138,7 @@ h2 {
 @media only screen and (min-width: 950px) {
 
     nav {
+        padding: 15px 20px;
         position: fixed;
         z-index: 100;
         left: 0.5%;
@@ -153,6 +154,8 @@ h2 {
         text-align: left;
     }
 
+    #title h1 {font-size: 3em;}
+
     #banner-pic {
         position: absolute;
         right: 15%;
@@ -161,6 +164,10 @@ h2 {
         height: 80%;
         margin: 0;
     }
+
+    #about-me {padding: 50px 100px;}
+
+    #projects {padding: 50px 100px;}
 
     #projects .project-screenshots {
         display: grid;
@@ -174,6 +181,8 @@ h2 {
         width: 90%;
         margin-bottom: 15px;
     }
+
+    #contact {padding: 50px 100px;}
 
     .inline {display: inline-block;}
 
